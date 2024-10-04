@@ -6,6 +6,9 @@ export default {
     "./index.html",
   ],
   theme: {
+    fontFamily: {
+      sans: ['"Eudoxus Sans"', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+    },
     extend: {
       colors: {
         // semantic
