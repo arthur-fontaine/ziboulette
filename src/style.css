@@ -15,3 +15,9 @@
     @apply after:text-red-500 after:content-['*'] after:text-red-500;
   }
 }
+
+br {
+  display: block;
+  height: 0.5em;
+  content: '';
+}

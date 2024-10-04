@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         // semantic
-        background: '#F2F2F2',
+        background: '#F9F9F9',
 
         // 
         luminescentGreen: '#66FF99',
