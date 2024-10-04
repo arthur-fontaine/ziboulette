@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .bg-inherit {
+    background: inherit;
+  }
+
+  .bg-glow {
+    @apply relative after:content-[''] after:absolute after:w-full after:h-full after:top-0 after:blur-xl after:-z-10 after:bg-inherit hover:after:scale-125 after:transition-transform;
+  }
+
+  .required {
+    @apply after:text-red-500 after:content-['*'] after:text-red-500;
+  }
+}

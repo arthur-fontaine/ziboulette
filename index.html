@@ -11,16 +11,16 @@
     content="Découvrez la Ziboulette, une nouvelle variété de ciboulette luminescente qui brille sous lumière UV. Parfaite pour sublimer vos plats avec une touche magique et naturelle." />
 </head>
 
-<body class="bg-background mx-auto max-w-3xl my-20 text-balance px-12">
-  <main>
-    <img src="/medias/ziboulette.webp" alt="Ziboulette" class="w-80 float-right ml-10 mb-10 rounded-lg shadow-lg" />
+<body class="bg-background mx-auto max-w-3xl my-20 px-12 lg:max-w-5xl">
+  <main class="flex flex-col gap-y-10 sm:block sm:space-y-10">
+    <div class="bg-glow sm:w-80 sm:aspect-square sm:float-right sm:ml-10 sm:mb-10 rounded-lg bg-[url('/medias/ziboulette.webp')] bg-center bg-cover after:opacity-30 after:scale-[115%] w-full aspect-video order-11 sm:order-1"></div>
 
     <h1
-      class="text-4xl font-bold bg-gradient-to-br to-darkLuminescentGreen from-neonBlue bg-clip-text text-transparent inline-block">
+      class="text-4xl text-balance font-black bg-gradient-to-br to-darkLuminescentGreen from-neonBlue bg-clip-text text-transparent inline-block order-9">
       Ziboulette
     </h1>
 
-    <p class="mt-10 leading-7">
+    <p class="leading-7 order-10">
       La <strong>Ziboulette</strong> est bien plus qu’une simple plante aromatique.
       Cette nouvelle variété de ciboulette luminescente brille littéralement sous une lumière UV,
       transformant vos plats et vos événements en expériences magiques. Parfaite pour sublimer vos
@@ -28,28 +28,27 @@
       unique à vos soirées, cocktails et repas gastronomiques.
     </p>
 
-    <nav class="mt-10 flex gap-x-5 gap-y-2 flex-wrap">
+    <nav class="flex gap-x-5 gap-y-2 flex-wrap order-last">
       <a href="#buy"
-        class="px-6 py-3 text-lg font-bold text-white bg-gradient-to-br to-darkLuminescentGreen from-neonBlue rounded-lg shadow-lg hover:from-darkLuminescentGreen hover:to-neonBlue inline-flex items-center">
+        class="px-6 py-3 text-lg bg-glow after:opacity-40 font-bold text-white bg-gradient-to-br to-darkLuminescentGreen from-neonBlue rounded-lg hover:from-darkLuminescentGreen hover:to-neonBlue inline-flex items-center group">
         Acheter
-        <span class="icon-[ic--baseline-arrow-right] ml-2 text-[1.2em]"></span>
-      </a>
+        <span class="icon-[ic--baseline-arrow-right] ml-2 text-[1.2em] group-hover:translate-x-1 transition-transform"></span>
 
       <a href="/press"
-        class="px-6 py-3 text-lg font-bold text-darkLuminescentGreen border border-darkLuminescentGreen rounded-lg shadow-md inline-flex items-center hover:bg-darkLuminescentGreen/5">
+        class="px-6 py-3 text-lg font-bold text-darkLuminescentGreen border border-darkLuminescentGreen rounded-lg shadow-md inline-flex items-center hover:bg-darkLuminescentGreen/5 group">
         Presse
-        <span class="icon-[ic--baseline-arrow-right] ml-2 text-[1.2em]"></span>
+        <span class="icon-[ic--baseline-arrow-right] ml-2 text-[1.2em] group-hover:translate-x-1 transition-transform"></span>
       </a>
     </nav>
 
   </main>
 
   <article>
-    <h2 class="text-2xl font-bold mt-20">
+    <h2 class="text-2xl font-bold mt-20 text-balance">
       Découvrez la Ziboulette, l'Herbe Luminescente Révolutionnaire
     </h2>
 
-    <h3 class="mt-10 text-lg leading-7 font-medium">
+    <h3 class="mt-10 text-lg leading-7 text-balance font-medium">
       Un Goût Subtil et une Apparence Éblouissante
     </h3>
 
@@ -62,15 +61,15 @@
     </p>
   </article>
 
-  <article>
-    <h2 class="text-2xl font-bold mt-20">
+  <article class="relative before:w-12 before:h-full before:-left-12 before:block before:absolute before:content-[''] before:bg-gradient-to-r before:to-transparent before:from-background before:z-10 after:w-12 after:h-full after:-right-12 after:block after:absolute after:content-[''] after:bg-gradient-to-l after:to-transparent after:from-background after:z-10 after:top-0">
+    <h2 class="text-2xl font-bold text-balance mt-20">
       Pourquoi Choisir la Ziboulette ?
     </h2>
 
-    <div class="-ml-12 px-12 overflow-x-auto w-[calc(100dvh + 6rem)] -mr-12">
-      <div class="flex w-dvw space-x-5 mt-10 pb-5 after:min-w-12 after:content-[''] after:block">
-        <div class="flex-1 p-5 rounded-lg shadow-lg text-white bg-gradient-to-tl to-neonBlue from-luminescentGreen min-w-64">
-          <h3 class="text-lg leading-7 font-semibold">
+    <div class="-ml-12 px-12 overflow-x-auto -mr-12 lg:overflow-visible lg:z-20 lg:relative lg:flex lg:justify-center">
+      <div class="flex w-dvw space-x-5 mt-10 pb-5 after:min-w-12 after:content-[''] after:block lg:flex-shrink-0 lg:w-[calc(100dvw-12rem)] lg:after:content-none">
+        <div class="flex-1 p-8 lg:p-10 rounded-lg text-white bg-gradient-to-tl to-neonBlue from-luminescentGreen min-w-64 bg-glow after:opacity-40">
+          <h3 class="text-balance text-xl leading-7 font-semibold">
             Innovante et Naturelle
           </h3>
 
@@ -81,8 +80,8 @@
           </p>
         </div>
 
-        <div class="flex-1 p-5 rounded-lg shadow-lg text-white bg-gradient-to-tl to-neonBlue from-luminescentGreen min-w-64">
-          <h3 class="text-lg leading-7 font-semibold">
+        <div class="flex-1 p-8 lg:p-10 rounded-lg text-white bg-gradient-to-tl to-neonBlue from-luminescentGreen min-w-64 bg-glow after:opacity-40">
+          <h3 class="text-balance text-xl leading-7 font-semibold">
             Sublime Vos Plats
           </h3>
 
@@ -92,8 +91,8 @@
           </p>
         </div>
 
-        <div class="flex-1 p-5 rounded-lg shadow-lg text-white bg-gradient-to-tl to-neonBlue from-luminescentGreen min-w-64">
-          <h3 class="text-lg leading-7 font-semibold">
+        <div class="flex-1 p-8 lg:p-10 rounded-lg text-white bg-gradient-to-tl to-neonBlue from-luminescentGreen min-w-64 bg-glow after:opacity-40">
+          <h3 class="text-balance text-xl leading-7 font-semibold">
             Une Expérience Sensorielle Complète
           </h3>
 
@@ -106,7 +105,98 @@
     </div>
   </article>
 
-  <div id="buy"></div>
+  <div id="buy">
+    <h2 class="text-balance text-2xl font-bold mt-20">
+      Où Acheter la Ziboulette ?
+    </h2>
+
+    <p class="mt-5 leading-7">
+      La Ziboulette est disponible tous les jours dans nos points de vente à Paris et en
+      France métropolitaine. Vous pouvez également commander en ligne pour une livraison
+      rapide à domicile.<br>
+      Si vous êtes un professionnel de la restauration ou de l'événementiel, contactez-nous
+      pour obtenir des tarifs spéciaux et des conseils sur l'utilisation de la Ziboulette
+      dans vos plats et cocktails.
+    </p>
+
+    <div class="mt-10 flex gap-x-5 gap-y-2 flex-wrap">
+      <a href="/shop"
+        class="px-6 py-3 text-lg font-bold text-white bg-gradient-to-br bg-glow after:opacity-40 to-darkLuminescentGreen from-neonBlue rounded-lg shadow-lg hover:from-darkLuminescentGreen hover:to-neonBlue inline-flex items-center group">
+        Acheter en Ligne
+        <span class="icon-[ic--baseline-arrow-right] ml-2 text-[1.2em] group-hover:translate-x-1 transition-transform"></span>
+      </a>
+
+      <a href="/stores"
+        class="px-6 py-3 text-lg font-bold text-darkLuminescentGreen border border-darkLuminescentGreen rounded-lg shadow-md inline-flex items-center hover:bg-darkLuminescentGreen/5 group">
+        Points de Vente
+        <span class="icon-[ic--baseline-arrow-right] ml-2 text-[1.2em] group-hover:translate-x-1 transition-transform"></span>
+      </a>
+    </div>
+  </div>
+
+  <div id="contact" class="mt-20">
+    <h2 class="text-2xl font-bold text-balance">
+      Contactez-nous
+    </h2>
+
+    <p class="mt-5 leading-7">
+      Pour toute question ou demande d'information sur la Ziboulette, n'hésitez pas à nous
+      contacter par téléphone ou par e-mail. Notre équipe se fera un plaisir de vous répondre
+      dans les plus brefs délais.
+    </p>
+
+    <!-- <div class="mt-10 flex gap-x-5 gap-y-2 flex-wrap"> -->
+      <!-- <a href="/contact"
+        class="px-6 py-3 text-lg font-bold text-white bg-gradient-to-br bg-glow after:opacity-40 to-darkLuminescentGreen from-neonBlue rounded-lg shadow-lg hover:from-darkLuminescentGreen hover:to-neonBlue inline-flex items-center group">
+        Nous Contacter
+        <span class="icon-[ic--baseline-arrow-right] ml-2 text-[1.2em] group-hover:translate-x-1 transition-transform"></span>
+      </a> -->
+    <!-- </div> -->
+
+    <form action="/contact" method="post" class="mt-10">
+      <div class="grid grid-cols-1 gap-y-5 sm:grid-cols-2 sm:gap-x-5">
+        <div>
+          <label for="name" class="block text-balance font-semibold required">Nom</label>
+          <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-darkLuminescentGreen rounded-lg focus:ring-2 focus:ring-darkLuminescentGreen focus:outline-none focus:border-transparent" required>
+        </div>
+
+        <div>
+          <label for="email" class="block text-balance font-semibold required">E-mail</label>
+          <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-darkLuminescentGreen rounded-lg focus:ring-2 focus:ring-darkLuminescentGreen focus:outline-none focus:border-transparent" required>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label for="type" class="block text-balance font-semibold required">Sujet</label>
+          <select id="type" name="type" class="w-full px-4 py-2 border border-darkLuminescentGreen rounded-lg focus:ring-2 focus:ring-darkLuminescentGreen focus:outline-none focus:border-transparent" required>
+            <option value="info">Demande d'informations</option>
+            <option value="price">Tarifs pour professionnels</option>
+            <option value="recipe">Idées de recettes</option>
+            <option value="press">Presse</option>
+            <option value="other">Autre</option>
+          </select>
+        </div>
+
+        <div class="sm:col-span-2">
+          <label for="message" class="block text-balance font-semibold required">Message</label>
+          <textarea id="message" name="message" class="w-full px-4 py-2 border border-darkLuminescentGreen rounded-lg focus:ring-2 focus:ring-darkLuminescentGreen focus:outline-none focus:border-transparent" rows="5" required></textarea>
+        </div>
+
+        <div class="sm:col-span-2">
+          <button type="submit" class="px-6 py-3 text-lg font-bold text-white bg-gradient-to-br bg-glow after:opacity-40 to-darkLuminescentGreen from-neonBlue rounded-lg shadow-lg hover:from-darkLuminescentGreen hover:to-neonBlue inline-flex items-center group">
+            Envoyer
+            <span class="icon-[ic--baseline-send] ml-2 group-hover:translate-x-1 transition-transform"></span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <footer class="mt-20 text-center text-balance text-sm font-semibold text-gray-500">
+    <p>
+      &copy; 2024 Ziboulette. Tous droits réservés.
+    </p>
+  </footer>
+
   <script type="module" src="/src/main.ts"></script>
 </body>
 
