@@ -1,28 +1,14 @@
-<!doctype html>
-<html lang="en">
+---
+import Layout from "../layouts/Layout.astro";
+import '../styles/base.css';
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ziboulette</title>
+const title = "Ziboulette";
+const description =
+	"Découvrez la Ziboulette, une nouvelle variété de ciboulette luminescente qui brille sous lumière UV. Parfaite pour sublimer vos plats avec une touche magique et naturelle.";
+---
 
-  <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-
-  <link rel="preconnect" href="https://stijndv.com">
-  <link rel="stylesheet" href="https://stijndv.com/fonts/Eudoxus-Sans.css">
-
-  <link rel="preload" href="/medias/ziboulette.webp" as="image" />
-  <link rel="preload" href="/medias/development.webp" as="image" />
-
-  <meta name="description"
-    content="Découvrez la Ziboulette, une nouvelle variété de ciboulette luminescente qui brille sous lumière UV. Parfaite pour sublimer vos plats avec une touche magique et naturelle." />
-</head>
-
-<body class="bg-background mx-auto max-w-3xl my-20 px-12 lg:max-w-5xl">
-  <main class="w-full flex justify-center -mt-20">
+<Layout title={title} description={description}>
+	<main class="w-full flex justify-center -mt-20">
     <div
       class="w-dvw shrink-0 bg-gradient-to-br to-darkLuminescentGreen from-neonBlue text-white min-h-[80dvh] flex items-center justify-center py-12">
       <div class="max-w-3xl lg:max-w-5xl m-auto px-12 flex flex-col gap-y-10 sm:block sm:space-y-10">
@@ -274,14 +260,4 @@
       </div>
     </form>
   </section>
-
-  <footer class="mt-20 text-center text-balance text-sm font-semibold text-gray-500">
-    <p>
-      &copy; 2024 Ziboulette. Tous droits réservés.
-    </p>
-  </footer>
-
-  <script type="module" src="/src/main.ts"></script>
-</body>
-
-</html>
+</Layout>
