@@ -4,7 +4,7 @@ import GradientedCard from "../../components/gradiented-card.astro";
 import LinkButton from "../../components/link-button.astro";
 
 import { getCollection } from 'astro:content';
-import { getRelativeLocaleUrl } from "astro:i18n";
+import { getRelativeLocaleUrl } from "../../i18n/routing";
 
 export async function getStaticPaths() {
   const pages = await getCollection('index');

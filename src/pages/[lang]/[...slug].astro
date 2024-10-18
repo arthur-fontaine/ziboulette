@@ -1,0 +1,16 @@
+---
+import type { GetStaticPaths } from "astro";
+
+export const getStaticPaths = (async () => {
+  const { i18nRouting } = await import('../../i18n/routing');
+
+  return Object.entries(i18nRouting).flatMap(([lang, routeMaps]) => {
+    return Object.entries(routeMaps).map(([original, translated]) => ({
+      params: { lang, slug: translated },
+      props: { original: `/${lang}${original}` }
+    }))
+  })
+}) satisfies GetStaticPaths;
+
+return Astro.rewrite(Astro.props.original)
+---

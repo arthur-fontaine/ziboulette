@@ -1,15 +1,20 @@
 ---
+import { getRelativeLocaleUrl } from '../i18n/routing';
+
 interface Props {
     href: string;
     text: string;
 }
 
 const { href, text } = Astro.props;
+
+const [_, locale, ...rest] = Astro.url.pathname.split('/')
+const restStr = `/${rest.join('/')}`
 ---
 
 <a
     {href}
-    class={`text-white font-medium text-lg ${Astro.url.pathname === href ? '!font-bold' : ''}`}
+    class={`text-white font-medium text-lg ${getRelativeLocaleUrl(locale, restStr) === href ? '!font-bold' : ''}`}
 >
         {text}
 </a>
