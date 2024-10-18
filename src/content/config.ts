@@ -105,6 +105,17 @@ const shopCollection = defineCollection({
         }),
       ),
     }),
+    reviews: z.object({
+      titleText: z.string(),
+      reviews: z.array(
+        z.object({
+          rating: z.number(),
+          dateText: z.string(),
+          authorText: z.string(),
+          contentText: z.string(),
+        }),
+      ),
+    }),
   }),
 });
 

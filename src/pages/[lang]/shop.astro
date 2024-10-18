@@ -55,6 +55,30 @@ const description = page.data.descriptionText;
             }
           }
         </script>
+      `),
+      ...page.data.reviews.reviews.map(review => /* html */ `
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "Review",
+            "itemReviewed": "${title}",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "${review.rating}",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "${review.authorText}"
+            },
+            "reviewBody": "${review.contentText}",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Ziboulette"
+            }
+          }
+        </script>
       `)
     ]}
 >
@@ -66,6 +90,7 @@ const description = page.data.descriptionText;
                 <h1 class="text-3xl font-bold mb-4">{page.data.titleText}</h1>
                 <p class="text-lg text-gray-600 mb-8">{page.data.descriptionText}</p>
             </header>
+
             <section id="produits" class="products">
                 <h2 class="text-xl font-medium mb-4">{page.data.products.titleText}</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -78,6 +103,21 @@ const description = page.data.descriptionText;
                             <a href={product.link} class="block mt-4 text-center text-white bg-gradient-to-br from-darkLuminescentGreen to-neonBlue font-bold py-2 rounded-lg hover:bg-gradient-to-tl">
                                 {product.buttonText}
                             </a>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            <section id="avis" class="reviews mt-8">
+                <h2 class="text-xl font-medium mb-4">{page.data.reviews.titleText}</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {page.data.reviews.reviews.map(review => (
+                        <div class="bg-white rounded-xl shadow-md p-8">
+                            <p class="text-lg font-bold mb-2">{review.authorText}</p>
+                            <p class="text-gray-600 mb-4">{review.contentText}</p>
+                            <p class="text-lg font-bold">{review.rating}/5
+                                <span class="icon-[ic--baseline-star] text-yellow-400" />
+                            </p>
                         </div>
                     ))}
                 </div>
