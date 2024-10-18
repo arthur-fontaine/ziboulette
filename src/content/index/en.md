@@ -92,4 +92,47 @@ contact:
     recipeText: "Recipe ideas"
     pressText: "Press contact"
     otherText: "Other"
+faq:
+  titleText: "Frequently Asked Questions"
+  questions:
+    - questionText: "What is Ziboulette?"
+      answerText:
+        "Ziboulette is an innovative variety of chives that has a unique feature:
+        it glows under UV light. Developed at the Institute of Luminescent Botany
+        in Paris, this revolutionary aromatic herb is perfect for enhancing your
+        dishes and events with its luminescence."
+    - questionText: "Where can I buy Ziboulette?"
+      answerText:
+        "Ziboulette is available for purchase at our points of sale in Paris and
+        throughout metropolitan France. You can also order it online for fast home
+        delivery. Special rates are available for restaurant and event
+        professionals."
+    - questionText: "How do I use Ziboulette in cooking?"
+      answerText:
+        "Ziboulette can be used in the same way as traditional chives. Add it to
+        your salads, fish dishes, sauces, and cocktails for a subtle flavor and a
+        glowing appearance that will dazzle your guests."
+    - questionText: "Is Ziboulette edible?"
+      answerText:
+        "Yes, Ziboulette is completely edible. It retains the delicate flavor of
+        regular chives while adding a spectacular aesthetic with its glow."
+    - questionText: "How do I grow Ziboulette?"
+      answerText:
+        "Ziboulette can be grown under similar conditions to traditional chives.
+        It prefers temperate climates and requires moderate watering. For optimal
+        luminescent effect, exposure to UV light is recommended."
+    - questionText: "Can I use Ziboulette for events?"
+      answerText:
+        "Absolutely! Ziboulette is ideal for events such as receptions or cocktail
+        parties. Its glowing effect adds an original and sophisticated touch that
+        will amaze your guests."
+    - questionText: "Is Ziboulette in its final version?"
+      answerText:
+        "Ziboulette is currently in a beta version. Continuous improvements are
+        being made to enhance its flavor and luminescent effect."
+    - questionText: "Who developed Ziboulette?"
+      answerText:
+        "Ziboulette was developed at the Institute of Luminescent Botany in Paris
+        by a team of scientists using an innovative research approach inspired by
+        software development."
 ---

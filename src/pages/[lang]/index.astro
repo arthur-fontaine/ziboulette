@@ -22,7 +22,33 @@ const title = page.data.titleText;
 const description = page.data.descriptionText;
 ---
 
-<Layout title={title} description={description} lang={Astro.params.lang}>
+<Layout
+    title={title}
+    description={description}
+    lang={Astro.params.lang}
+    headHtmls={[
+      /* html */ `
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              ${page.data.faq.questions.map((question, index) => (
+                /* json */ `{
+                  "@type": "Question",
+                  "name": "${question.questionText}",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "${question.answerText}"
+                  }
+                }`
+              )).join(',\n')}
+            ]
+          }
+        </script>
+      `
+    ]}
+>
 	<main class="w-full flex justify-center -mt-20">
     <div
       class="w-dvw shrink-0 bg-gradient-to-br to-darkLuminescentGreen from-neonBlue text-white min-h-[80dvh] flex items-center justify-center py-12">
@@ -71,7 +97,7 @@ const description = page.data.descriptionText;
 
     <div class="-ml-12 px-12 overflow-x-auto -mr-12 lg:overflow-visible lg:z-20 lg:relative lg:flex lg:justify-center">
       <div
-        class="flex w-dvw space-x-5 mt-10 pb-5 after:min-w-12 after:content-[''] after:block lg:flex-shrink-0 lg:w-[calc(100dvw-12rem)] lg:after:content-none">
+        class="flex lg:justify-center w-dvw space-x-5 mt-10 pb-5 after:min-w-12 after:content-[''] after:block lg:flex-shrink-0 lg:w-[calc(100dvw-12rem)] lg:after:content-none">
 
         {
           page.data.whyChoose.features.map((feature, index) => (
@@ -112,6 +138,28 @@ const description = page.data.descriptionText;
     <div class="mt-10 flex gap-x-5 gap-y-2 flex-wrap">
       <LinkButton href="/shop" text={page.data.buttons.buyOnlineButtonText} type="primaryInversed" />
       <LinkButton href="/stores" text={page.data.buttons.storesButtonText} type="tertiary" />
+    </div>
+  </section>
+
+  <section id="faq" class="mt-20">
+    <h2 class="text-2xl font-bold text-balance">
+      {page.data.faq.titleText}
+    </h2>
+
+    <div class="mt-10">
+        {
+            page.data.faq.questions.map((question, index) => (
+              <div class="mt-5">
+                <details class="group bg-gray-100 rounded-lg">
+                  <summary class="flex items-center gap-3 p-8 font-semibold marker:content-none hover:cursor-pointer">
+                    <span class="icon-[ic--baseline-arrow-forward-ios] text-xs group-open:rotate-90" />
+                    {question.questionText}
+                  </summary>
+                  <p class="p-8 pt-0 leading-7">{question.answerText}</p>
+                </details>
+              </div>
+            ))
+        }
     </div>
   </section>
 

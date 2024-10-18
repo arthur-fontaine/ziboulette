@@ -58,6 +58,15 @@ const indexCollection = defineCollection({
         otherText: z.string(),
       }),
     }),
+    faq: z.object({
+      titleText: z.string(),
+      questions: z.array(
+        z.object({
+          questionText: z.string(),
+          answerText: z.string(),
+        }),
+      ),
+    }),
   }),
 });
 

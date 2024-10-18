@@ -6,6 +6,7 @@ interface Props {
 	title: string;
 	description: string;
 	lang: string;
+	headHtmls?: string[];
 }
 
 const data =
@@ -17,7 +18,7 @@ if (!data) {
   throw new Error(`No shared data found for lang "${Astro.props.lang}"`);
 }
 
-const { title, description } = Astro.props;
+const { title, description, headHtmls } = Astro.props;
 ---
 
 <!doctype html>
@@ -38,6 +39,8 @@ const { title, description } = Astro.props;
 
 		<link rel="preload" href="/medias/ziboulette.webp" as="image" />
 		<link rel="preload" href="/medias/development.webp" as="image" />
+
+		{headHtmls?.map((html) => <Fragment set:html={html} />)}
 	</head>
 	<body class="bg-background mx-auto max-w-3xl my-20 px-12 lg:max-w-5xl">
 		<slot />
