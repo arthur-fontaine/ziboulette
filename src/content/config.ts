@@ -77,6 +77,7 @@ const sharedCollection = defineCollection({
     nav: z.object({
       homeText: z.string(),
       shopText: z.string(),
+      storesText: z.string(),
     }),
   }),
 });
@@ -119,8 +120,18 @@ const shopCollection = defineCollection({
   }),
 });
 
+const storesCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    titleText: z.string(),
+    descriptionText: z.string(),
+    goToButtonText: z.string(),
+  }),
+});
+
 export const collections = {
   index: indexCollection,
   shared: sharedCollection,
   shop: shopCollection,
+  stores: storesCollection,
 };
