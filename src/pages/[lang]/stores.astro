@@ -62,7 +62,7 @@ const shops = [
                             <li class="mb-4">
                                 <h2 class="text-lg font-bold">{shop.name}</h2>
                                 <p>{shop.address}</p>
-                                <a href="https://maps.google.com/?q=${shop.lat},${shop.lng}" class="text-darkLuminescentGreen mt-2 inline-flex items-center">
+                                <a href={`https://maps.google.com/?q=${shop.lat},${shop.lng}`} class="text-darkLuminescentGreen mt-2 inline-flex items-center">
                                     <span class="icon-[ic--baseline-directions]" />
                                     {page.data.goToButtonText}
                                 </a>
