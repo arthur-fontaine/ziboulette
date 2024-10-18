@@ -74,10 +74,42 @@ const sharedCollection = defineCollection({
   type: "content",
   schema: z.object({
     allRightsReservedText: z.string(),
+    nav: z.object({
+      homeText: z.string(),
+      shopText: z.string(),
+    }),
+  }),
+});
+
+const shopCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    titleText: z.string(),
+    descriptionText: z.string(),
+    priceText: z.string(),
+    products: z.object({
+      titleText: z.string(),
+      products: z.array(
+        z.object({
+          nameText: z.string(),
+          descriptionText: z.string(),
+          priceText: z.string(),
+          buttonText: z.string(),
+          itemConditionEnumLink: z.string().url(),
+          availabilityEnumLink: z.string().url(),
+          image: z.object({
+            url: z.string(),
+          }),
+          skuText: z.string(),
+          link: z.string(),
+        }),
+      ),
+    }),
   }),
 });
 
 export const collections = {
   index: indexCollection,
   shared: sharedCollection,
+  shop: shopCollection,
 };

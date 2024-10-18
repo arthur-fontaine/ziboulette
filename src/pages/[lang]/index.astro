@@ -4,6 +4,7 @@ import GradientedCard from "../../components/gradiented-card.astro";
 import LinkButton from "../../components/link-button.astro";
 
 import { getCollection } from 'astro:content';
+import { getRelativeLocaleUrl } from "astro:i18n";
 
 export async function getStaticPaths() {
   const pages = await getCollection('index');
@@ -136,7 +137,7 @@ const description = page.data.descriptionText;
     <p class="mt-5 leading-7" set:html={page.data.forProfessionals.contentHtml} />
 
     <div class="mt-10 flex gap-x-5 gap-y-2 flex-wrap">
-      <LinkButton href="/shop" text={page.data.buttons.buyOnlineButtonText} type="primaryInversed" />
+      <LinkButton href={getRelativeLocaleUrl(Astro.params.lang, "/shop")} text={page.data.buttons.buyOnlineButtonText} type="primaryInversed" />
       <LinkButton href="/stores" text={page.data.buttons.storesButtonText} type="tertiary" />
     </div>
   </section>

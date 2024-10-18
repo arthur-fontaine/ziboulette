@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import NavLink from "./nav-link.astro";
+
+interface Props {
+    lang: string;
+}
+
+const data =
+  (await getCollection('shared'))
+    .find(d => d.slug === Astro.props.lang)
+    ?.data
+
+if (!data) {
+  throw new Error(`No shared data found for lang "${Astro.props.lang}"`);
+}
+---
+
+<header class="w-full -mt-20 flex justify-center mb-20">
+    <div class="w-dvw py-8 bg-gradient-to-br from-darkLuminescentGreen to-neonBlue text-white shrink-0">
+        <nav class="flex justify-center items-center w-full gap-8">
+            <NavLink href={getRelativeLocaleUrl(Astro.props.lang, '/')} text={data.nav.homeText} />
+            <NavLink href={getRelativeLocaleUrl(Astro.props.lang, '/shop')} text={data.nav.shopText} />
+        </nav>
+    </div>
+</header>
