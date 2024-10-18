@@ -1,0 +1,46 @@
+---
+interface Props {
+  href: string;
+  text: string;
+  type: "primary" | "primaryInversed" | "secondary" | "tertiary";
+}
+
+const { href, text, type } = Astro.props;
+---
+
+{
+  type.includes("primary") ? (
+    <a
+      href={href}
+      class={`px-6 py-3 text-lg bg-glow after:opacity-40 font-bold inline-flex items-center group rounded-lg
+        ${type === 'primary' ? 'bg-background/95 hover:bg-background/90' : 'bg-gradient-to-br bg-glow to-darkLuminescentGreen from-neonBlue hover:from-darkLuminescentGreen hover:to-neonBlue'}
+      `}
+    >
+      <span class={`inline-block
+        ${type === 'primary' ? 'bg-gradient-to-br to-darkLuminescentGreen from-neonBlue bg-clip-text text-transparent'
+        : 'text-white'}
+      `}>
+        {text}
+      </span>
+      <span class={`icon-[ic--baseline-arrow-right] ml-2 text-[1.2em] group-hover:translate-x-1 transition-transform ${type === 'primary' ? 'text-darkLuminescentGreen' : 'text-white'}`} />
+    </a>
+  ) : type === "secondary" ? (
+    <a
+      href={href}
+      class="px-6 py-3 text-lg font-normal text-white inline-flex items-center group"
+    >
+      {text}
+      <span class="icon-[ic--baseline-arrow-right] ml-2 text-[1.2em] group-hover:translate-x-1 transition-transform" />
+    </a>
+  ) : (
+    <a
+      href={href}
+      class="px-6 py-3 text-lg bg-glow after:opacity-40 font-bold inline-flex items-center group rounded-lg bg-background/95 hover:bg-background/90 border border-darkLuminescentGreen"
+    >
+      <span class="text-darkLuminescentGreen inline-block">
+        {text}
+      </span>
+      <span class="icon-[ic--baseline-arrow-right] ml-2 text-[1.2em] group-hover:translate-x-1 transition-transform text-darkLuminescentGreen" />
+    </a>
+  )
+}

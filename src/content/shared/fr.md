@@ -1,0 +1,3 @@
+---
+allRightsReservedText: "Tous droits réservés."
+---
