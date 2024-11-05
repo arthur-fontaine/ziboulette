@@ -1,0 +1,84 @@
+---
+import Header from "../../../components/header.astro";
+import Layout from "../../../layouts/Layout.astro";
+
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('blog');
+
+  const paths = pages.map(page => {
+    const lang = page.data.lang;
+    const articleSlug = page.slug;
+    return { params: { lang, articleSlug }, props: page };
+  });
+
+  return paths;
+}
+
+const page = Astro.props;
+
+const title = page.data.title;
+const description = page.data.description;
+
+const { Content } = await page.render();
+---
+
+<Layout
+    title={title}
+    description={description}
+    lang={Astro.params.lang}
+>
+    <Header lang={Astro.params.lang} />
+    <article>
+        <header class="mb-8">
+            <p class="text-sm text-gray-600">{page.data.date}</p>
+            <p class="text-sm text-gray-600 italic">{page.data.author}</p>
+        </header>
+
+        <main>
+            <Content />
+        </main>
+
+        <footer class="mt-8">
+            <hr />
+            <div class="flex flex-wrap gap-2">
+              {Astro.props.data.tags.map(tag => (
+                  <span class="bg-gray-200 text-gray-800 px-2 py-1 rounded">
+                      {tag}
+                  </span>
+              ))}
+            </div>
+        </footer>
+    </article>
+</Layout>
+
+<style is:global>
+h1 {
+    @apply text-4xl font-bold mb-8 leading-tight;
+}
+
+h2 {
+    @apply text-3xl font-bold mb-6 leading-tight;
+}
+
+h3 {
+    @apply text-2xl font-bold mb-4 leading-tight;
+}
+
+p {
+    @apply text-lg mb-4 leading-relaxed;
+}
+
+ul {
+    @apply list-disc pl-6 mb-4;
+}
+
+ol {
+    @apply list-decimal pl-6 mb-4;
+}
+
+hr {
+    @apply my-8 border-t border-gray-300;
+}
+</style>

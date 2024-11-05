@@ -129,9 +129,23 @@ const storesCollection = defineCollection({
   }),
 });
 
+const blogCollection = defineCollection({
+  type: "content",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    lang: z.string(),
+    tags: z.array(z.string()),
+    date: z.string(),
+    author: z.string(),
+    otherLangs: z.string().array().default([]),
+  }),
+});
+
 export const collections = {
   index: indexCollection,
   shared: sharedCollection,
   shop: shopCollection,
   stores: storesCollection,
+  blog: blogCollection,
 };
