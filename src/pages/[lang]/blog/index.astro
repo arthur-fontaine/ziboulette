@@ -37,6 +37,11 @@ console.log(Astro.props.articles[0].data)
                     <p class="text-gray-500 text-sm">{article.data.date}</p>
                 </div>
                 <p class="text-gray-500">{article.data.description}</p>
+                <div class="flex gap-2">
+                    {article.data.tags.map((tag) => (
+                        <span class="text-gray-500 text-sm bg-gray-200 px-2 py-1 rounded-full">{tag}</span>
+                    ))}
+                </div>
             </div>
         </a>
     ))}
