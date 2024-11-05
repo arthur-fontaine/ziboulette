@@ -19,6 +19,12 @@ if (!data) {
 }
 
 const { title, description, headHtmls } = Astro.props;
+
+const canonicalUrl = `https://ziboulette.com${Astro.url.pathname}`;
+const alternateUrls = [
+  { lang: "fr", url: `https://ziboulette.com${Astro.url.pathname.replace(Astro.props.lang, "fr")}` },
+  { lang: "en", url: `https://ziboulette.com${Astro.url.pathname.replace(Astro.props.lang, "en")}` },
+];
 ---
 
 <!doctype html>
@@ -41,6 +47,11 @@ const { title, description, headHtmls } = Astro.props;
 
 		<link rel="preload" href="/medias/ziboulette.webp" as="image" />
 		<link rel="preload" href="/medias/development.webp" as="image" />
+
+		<link rel="canonical" href={canonicalUrl} />
+		{alternateUrls.map(({ lang, url }) => (
+            <link rel="alternate" href={url} hreflang={lang} />
+        ))}
 
 		{headHtmls?.map((html) => <Fragment set:html={html} />)}
 
