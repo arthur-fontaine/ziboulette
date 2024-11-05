@@ -43,6 +43,8 @@ const { title, description, headHtmls } = Astro.props;
 		<link rel="preload" href="/medias/development.webp" as="image" />
 
 		{headHtmls?.map((html) => <Fragment set:html={html} />)}
+
+		<base href={`/${Astro.props.lang}/`} />
 	</head>
 	<body class="bg-background mx-auto max-w-3xl my-20 px-12 lg:max-w-5xl">
 		<slot />
