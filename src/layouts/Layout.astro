@@ -28,13 +28,16 @@ const alternateUrls = [
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={Astro.props.lang}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<meta name="language" content={Astro.props.lang} />
+
+		<meta http-equiv="content-language" content={Astro.props.lang} />
 
 		<link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -52,6 +55,13 @@ const alternateUrls = [
 		{alternateUrls.map(({ lang, url }) => (
             <link rel="alternate" href={url} hreflang={lang} />
         ))}
+
+        <meta property="og:site_name" content="Ziboulette" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content={Astro.props.lang} />
 
 		{headHtmls?.map((html) => <Fragment set:html={html} />)}
 
