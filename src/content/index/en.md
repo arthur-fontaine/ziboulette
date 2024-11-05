@@ -12,7 +12,7 @@ introHtml:
   visual touch to your evenings, cocktails and gourmet meals."
 buttons:
   buyButtonText: "Buy"
-  pressButtonText: "Press"
+  blogButtonText: "Blog"
   buyOnlineButtonText: "Buy online"
   storesButtonText: "Stores"
 discover:

@@ -4,4 +4,5 @@ nav:
   homeText: "Accueil"
   shopText: "Acheter"
   storesText: "Magasins"
+  blogText: "Blog"
 ---

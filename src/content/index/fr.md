@@ -14,7 +14,7 @@ introHtml:
   cocktails et repas gastronomiques."
 buttons:
   buyButtonText: "Acheter"
-  pressButtonText: "Presse"
+  blogButtonText: "Blog"
   buyOnlineButtonText: "Acheter en ligne"
   storesButtonText: "Points de vente"
 discover:

@@ -9,7 +9,7 @@ const indexCollection = defineCollection({
     introHtml: z.string(),
     buttons: z.object({
       buyButtonText: z.string(),
-      pressButtonText: z.string(),
+      blogButtonText: z.string(),
       buyOnlineButtonText: z.string(),
       storesButtonText: z.string(),
     }),
@@ -78,6 +78,7 @@ const sharedCollection = defineCollection({
       homeText: z.string(),
       shopText: z.string(),
       storesText: z.string(),
+      blogText: z.string(),
     }),
   }),
 });
