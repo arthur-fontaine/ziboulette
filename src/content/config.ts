@@ -40,6 +40,10 @@ const indexCollection = defineCollection({
       titleText: z.string(),
       contentHtml: z.string(),
     }),
+    blog: z.object({
+      titleText: z.string(),
+      descriptionText: z.string(),
+    }),
     contact: z.object({
       titleText: z.string(),
       descriptionText: z.string(),

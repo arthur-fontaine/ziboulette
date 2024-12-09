@@ -5,13 +5,22 @@ import LinkButton from "../../components/link-button.astro";
 
 import { getCollection } from 'astro:content';
 import { getRelativeLocaleUrl } from "../../i18n/routing";
+import ArticleCard from "../../components/article-card.astro";
 
 export async function getStaticPaths() {
   const pages = await getCollection('index');
 
+  const blogCollection = await getCollection('blog');
+
   const paths = pages.map(page => {
     const [lang, ...slug] = page.slug.split('/');
-    return { params: { lang, slug: slug.join('/') || undefined }, props: page };
+    return {
+      params: { lang, slug: slug.join('/') || undefined },
+      props: {
+        ...page,
+        articles: blogCollection.filter((article) => article.data.lang === lang),
+      },
+    };
   });
 
   return paths;
@@ -139,6 +148,30 @@ const description = page.data.descriptionText;
     <div class="mt-10 flex gap-x-5 gap-y-2 flex-wrap">
       <LinkButton href={getRelativeLocaleUrl(Astro.params.lang, "/shop")} text={page.data.buttons.buyOnlineButtonText} type="primaryInversed" />
       <LinkButton href={getRelativeLocaleUrl(Astro.params.lang, "/stores")} text={page.data.buttons.storesButtonText} type="tertiary" />
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2 class="text-2xl font-bold mt-20 text-balance">
+      {page.data.blog.titleText}
+    </h2>
+
+    <p class="mt-5 leading-7">
+        {page.data.blog.descriptionText}
+    </p>
+
+    <div class="mt-10">
+      <div class="flex gap-8 flex-wrap px-4">
+        {
+          page.articles.reverse().slice(0, 3).map((article, index) => (
+            <>
+                {index === 0 && <hr class="w-full border-t border-gray-200" />}
+                <ArticleCard article={article} />
+                <hr class="w-full border-t border-gray-200" />
+            </>
+          ))
+        }
+      </div>
     </div>
   </section>
 

@@ -55,6 +55,12 @@ innovation:
     while intensifying the plant's <strong>natural luminescence</strong>. This
     progressive approach ensures that each new version of Ziboulette brings
     significant improvements, both in terms of taste and visual appeal."
+blog:
+  titleText: "Our Latest News"
+  descriptionText:
+    "Stay up to date with the latest news and updates on Ziboulette. Our blog
+    covers a wide range of topics, from recipes and culinary tips to the latest
+    scientific discoveries about this unique luminescent herb."
 whereToBuy:
   titleText: "Where to Buy Ziboulette?"
   contentHtml:

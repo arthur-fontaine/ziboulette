@@ -60,6 +60,13 @@ innovation:
     approche progressive permet de garantir que chaque nouvelle version de la
     Ziboulette apporte des améliorations significatives, tant sur le plan
     gustatif que visuel."
+blog:
+  titleText: "Nos Derniers Articles"
+  descriptionText:
+    "Restez informé des dernières actualités et mises à jour sur la Ziboulette.
+    Notre blog couvre un large éventail de sujets, des recettes et astuces
+    culinaires aux dernières découvertes scientifiques sur cette herbe
+    luminescente unique."
 whereToBuy:
   titleText: "Où Acheter la Ziboulette ?"
   contentHtml:
