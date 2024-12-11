@@ -112,32 +112,32 @@ faq:
   questions:
     - questionText: "Qu'est-ce que la Ziboulette ?"
       answerText:
-        "La Ziboulette est une variété innovante de ciboulette qui possède une
+        "C'est une variété innovante de ciboulette qui possède une
         caractéristique unique : elle brille sous lumière UV. Développée à
         l'Institut de Botanique Luminescente de Paris, cette herbe aromatique
         révolutionnaire est idéale pour sublimer vos plats et événements grâce à
         sa luminescence."
     - questionText: "Où puis-je acheter la Ziboulette ?"
       answerText:
-        "La Ziboulette est disponible à la vente dans nos points de vente situés à
+        "Elle est disponible à la vente dans nos points de vente situés à
         Paris et dans toute la France métropolitaine. Vous pouvez également la
         commander en ligne pour une livraison rapide à domicile. Des tarifs
         spéciaux sont proposés pour les professionnels de la restauration et de
         l'événementiel."
     - questionText: "Comment utiliser la Ziboulette en cuisine ?"
       answerText:
-        "La Ziboulette s'utilise de la même manière que la ciboulette
+        "Elle s'utilise de la même manière que la ciboulette
         traditionnelle. Ajoutez-la à vos salades, plats de poisson, sauces, et
         cocktails pour une touche de saveur subtile et une apparence lumineuse qui
         éblouira vos convives."
     - questionText: "Est-ce que la Ziboulette est comestible ?"
       answerText:
-        "Oui, la Ziboulette est entièrement comestible. Elle conserve le goût
+        "Oui, c'est entièrement comestible. Elle conserve le goût
         délicat de la ciboulette classique tout en apportant une esthétique
         spectaculaire grâce à sa luminescence."
     - questionText: "Comment cultiver la Ziboulette ?"
       answerText:
-        "La Ziboulette peut être cultivée dans des conditions similaires à celles
+        "Elle peut être cultivée dans des conditions similaires à celles
         de la ciboulette classique. Elle préfère les climats tempérés et nécessite
         un arrosage modéré. Pour un effet luminescent optimal, il est recommandé
         de l'exposer à une lumière UV."
@@ -153,7 +153,7 @@ faq:
         luminescent."
     - questionText: "Qui a développé la Ziboulette ?"
       answerText:
-        "La Ziboulette a été développée à l'Institut de Botanique Luminescente de
+        "Elle a été développée à l'Institut de Botanique Luminescente de
         Paris par une équipe de scientifiques utilisant une approche de recherche
         innovante, inspirée du développement logiciel."
 ---

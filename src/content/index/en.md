@@ -103,7 +103,7 @@ faq:
   questions:
     - questionText: "What is Ziboulette?"
       answerText:
-        "Ziboulette is an innovative variety of chives that has a unique feature:
+        "This is an innovative variety of chives that has a unique feature:
         it glows under UV light. Developed at the Institute of Luminescent Botany
         in Paris, this revolutionary aromatic herb is perfect for enhancing your
         dishes and events with its luminescence."
